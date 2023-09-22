@@ -1,0 +1,16 @@
+{
+  "name": "docker-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:dev:container": "docker run -p 3000:3000 -v $PWD:/docker-sample -v /docker-sample/node_modules docker-sample nodemon server.js"
+  },
+  "author": "Gazz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
